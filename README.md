@@ -1,27 +1,42 @@
 Step Detection using Single RGB Camera
 ====
 
-Overview <br>
-固定カメラ
+Overview
+Measuring how people walk using a single RGB camera.
 
 ## Description
+This method can measure step positions in 3D scale, therefore stride length, step width, step timing, walking speed and walking distance are measurable. A camera is supposed to be fixed at the position where whole body of the target people are captured. Step position and timing are measured using OpenPose.
 
 ## Demo
+1. Room
+set parameters in "FootPrint.h" as following
+- USE_CHECKER_BOARD: true
+- PIXEL_SCALE: 0.1
+- VOTE_RANGE: 5
+- STEP_THRESHOLD: 10
+then run.
 
-## VS. 
+2. Badminton game
+set parameters in "FootPrint.h" as following
+- USE_CHECKER_BOARD: false
+- PIXEL_SCALE: 0.05
+- VOTE_RANGE: 10
+- STEP_THRESHOLD: 5
+then run.
 
 ## Requirement
+openpose
+https://github.com/CMU-Perceptual-Computing-Lab/openpose
 
 ## Usage
+Our method use Homography matrix between the floor plain and image plain.
+1. Estimate Homography matrix usign calibration board
+  1. prepare calibration.mp4
+2. Estimate Homography matrix by clicking
 
 ## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+1. build openpose following https://github.com/CMU-Perceptual-Computing-Lab/openpose.
+2. copy "openpose/models" to the directory that executable file exists.
 
 ## Author
-
-[tcnksm](https://github.com/tcnksm)
+Kntaro Yagi (yagiken525@keio.jp)
