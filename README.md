@@ -3,6 +3,8 @@ Step Detection using Single RGB Camera
 
 Measuring how people walk using a single RGB camera.
 
+![result](https://github.com/yagiken0525/stepDetection_simplified/blob/media/demo.gif)
+
 ## Description
 This method can measure step positions in 3D scale, therefore stride length, step width, step timing, walking speed and walking distance are measurable. A camera is supposed to be fixed at the position where whole body of the target people are captured. Step position and timing are measured using OpenPose.
 
