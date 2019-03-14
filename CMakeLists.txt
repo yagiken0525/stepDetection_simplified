@@ -44,7 +44,7 @@ include_directories(${OpenPose_INCLUDE_DIRS} ${GFLAGS_INCLUDE_DIR} ${GLOG_INCLUD
 target_link_libraries(${PROJECT_NAME} ${OpenPose_LIBS} ${GFLAGS_LIBRARY} ${GLOG_LIBRARY})
 
 # basicFunc
-add_subdirectory(src/basicFunctions)
+add_subdirectory(src/basicFunction)
 target_link_libraries(${PROJECT_NAME} basicFunc)
 
 
