@@ -5,7 +5,7 @@
 #ifndef FOOTPRINT_H
 #define FOOTPRINT_H
 
-#include "../src/basicFunctions/basicFunction.h"
+#include "../src/basicFunction/basicFunction.h"
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>

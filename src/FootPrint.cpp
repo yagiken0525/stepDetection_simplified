@@ -3,7 +3,7 @@
 //
 
 #include "FootPrint.h"
-#include "basicFunctions/basicFunction.h"
+#include "basicFunction/basicFunction.h"
 //#include "openPose/myOpenPose.h"
 #include <opencv2/sfm.hpp>
 
@@ -62,7 +62,7 @@ void FootPrint::getBackGroundImage() {
             capture >> backGround;
             cv::Mat dummy;
             cv::resize(backGround, dummy, cv::Size(), VIS_IMAGE_WIDTH/backGround.cols, VIS_IMAGE_HEIGHT/backGround.rows);
-            cv::imshow("checker board: push S to save", dummy);
+            cv::imshow("Back Ground Image: push S to save", dummy);
             int k = cv::waitKey(0);
             if (k == 115) {
                 capture.release();
@@ -92,7 +92,7 @@ void FootPrint::getHomographyMatrix(){
                 capture >> checkerBoardImage;
                 cv::Mat dummy;
                 cv::resize(checkerBoardImage, dummy, cv::Size(), VIS_IMAGE_WIDTH/checkerBoardImage.cols, VIS_IMAGE_HEIGHT/checkerBoardImage.rows);
-                cv::imshow("checker board", dummy);
+                cv::imshow("checker board image: push S to save ", dummy);
                 int k = cv::waitKey(0);
                 if (k == 115) {
                     capture.release();
